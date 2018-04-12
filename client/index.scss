@@ -72,6 +72,7 @@ body {
 }
 
 .initials {
+  display: inline-block;
   grid-column: 3;
   grid-row: 1 /span 3;
   font-size: 20em;
@@ -90,4 +91,22 @@ body {
   background-color: #A5288E;
   padding: 2px;
   font-weight: bold;
+}
+
+.technology-names {
+  font-family: monospace;
+  font-size: 20px;
+  grid-column: 3;
+  grid-row: 1;
+  transform: rotate(-20deg);
+  color: #7A8A88;
+}
+
+#html {
+  margin-left: 0;
+  padding-bottom: 40px;
+}
+
+#css {
+  margin-left: 50px;
 }

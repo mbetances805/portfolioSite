@@ -6456,6 +6456,16 @@ var Main = function Main(props) {
         'p',
         { className: 'initials' },
         'MB'
+      ),
+      _react2.default.createElement(
+        'p',
+        { className: 'technology-names', id: 'html' },
+        'HTML5'
+      ),
+      _react2.default.createElement(
+        'p',
+        { className: 'technology-names', id: 'css' },
+        'CSS3'
       )
     )
   );
@@ -6620,7 +6630,7 @@ exports = module.exports = __webpack_require__(93)();
 
 
 // module
-exports.push([module.i, "body {\n  font-family: 'PT Sans', sans-serif; }\n  body a {\n    text-decoration: none; }\n  body label {\n    display: block; }\n  body nav {\n    font-family: 'Raleway', sans-serif;\n    text-align: center; }\n  body nav a {\n    display: inline-block;\n    margin: 1em; }\n  body form div {\n    margin: 1em;\n    display: inline-block; }\n  body p {\n    display: block;\n    margin: auto; }\n\n.container {\n  display: grid;\n  grid-template-columns: 0.3fr 1fr 2fr 1fr;\n  grid-template-rows: repeat(3, 1fr);\n  padding-top: 100px; }\n\n.introduction {\n  grid-column: 2 /span 2;\n  grid-row: 2 /span 2;\n  font-size: 50px;\n  perspective: 1000px;\n  perspective-origin: 200px 40px; }\n\n.technologies-list {\n  font-size: 12px;\n  letter-spacing: 3px;\n  color: #A5288E; }\n\n.intro-letters {\n  transition: transform 300ms ease-in-out;\n  display: inline-block; }\n\n.intro-letters:hover {\n  -webkit-transform: scale(1.2, 0.8);\n  transform: scale(1.2, 0.8);\n  color: #FD777F;\n  text-shadow: -2px -2px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; }\n\n.intro-spacing {\n  padding-right: 5px; }\n\n.initials {\n  grid-column: 3;\n  grid-row: 1 /span 3;\n  font-size: 20em;\n  color: #475CDA;\n  text-shadow: -10px -10px 0 #000;\n  transform: rotate(-20deg);\n  z-index: -1; }\n\n.nav-links {\n  visibility: hidden; }\n\n.nav-links:hover {\n  visibility: visible;\n  background-color: #A5288E;\n  padding: 2px;\n  font-weight: bold; }\n", ""]);
+exports.push([module.i, "body {\n  font-family: 'PT Sans', sans-serif; }\n  body a {\n    text-decoration: none; }\n  body label {\n    display: block; }\n  body nav {\n    font-family: 'Raleway', sans-serif;\n    text-align: center; }\n  body nav a {\n    display: inline-block;\n    margin: 1em; }\n  body form div {\n    margin: 1em;\n    display: inline-block; }\n  body p {\n    display: block;\n    margin: auto; }\n\n.container {\n  display: grid;\n  grid-template-columns: 0.3fr 1fr 2fr 1fr;\n  grid-template-rows: repeat(3, 1fr);\n  padding-top: 100px; }\n\n.introduction {\n  grid-column: 2 /span 2;\n  grid-row: 2 /span 2;\n  font-size: 50px;\n  perspective: 1000px;\n  perspective-origin: 200px 40px; }\n\n.technologies-list {\n  font-size: 12px;\n  letter-spacing: 3px;\n  color: #A5288E; }\n\n.intro-letters {\n  transition: transform 300ms ease-in-out;\n  display: inline-block; }\n\n.intro-letters:hover {\n  -webkit-transform: scale(1.2, 0.8);\n  transform: scale(1.2, 0.8);\n  color: #FD777F;\n  text-shadow: -2px -2px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; }\n\n.intro-spacing {\n  padding-right: 5px; }\n\n.initials {\n  display: inline-block;\n  grid-column: 3;\n  grid-row: 1 /span 3;\n  font-size: 20em;\n  color: #475CDA;\n  text-shadow: -10px -10px 0 #000;\n  transform: rotate(-20deg);\n  z-index: -1; }\n\n.nav-links {\n  visibility: hidden; }\n\n.nav-links:hover {\n  visibility: visible;\n  background-color: #A5288E;\n  padding: 2px;\n  font-weight: bold; }\n\n.technology-names {\n  font-family: monospace;\n  font-size: 20px;\n  grid-column: 3;\n  grid-row: 1;\n  transform: rotate(-20deg);\n  color: #7A8A88; }\n\n#html {\n  margin-left: 0;\n  padding-bottom: 40px; }\n\n#css {\n  margin-left: 50px; }\n", ""]);
 
 // exports
 

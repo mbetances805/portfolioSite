@@ -50,6 +50,8 @@ const Main = (props) => {
           <p className='technologies-list'>{'Node.js / React / Redux / Python'}</p>
         </div>
         <p className='initials'>{'MB'}</p>
+        <p className='technology-names' id='html'>{'HTML5'}</p>
+        <p className='technology-names' id='css'>{'CSS3'}</p>
       </div>
     </div>
   )
