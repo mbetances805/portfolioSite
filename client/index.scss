@@ -1,0 +1,93 @@
+body {
+  font-family: 'PT Sans', sans-serif;
+
+  a {
+    text-decoration: none;
+  }
+
+  label {
+    display: block;
+  }
+
+  nav {
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 1em;
+  }
+
+  form div {
+    margin: 1em;
+    display: inline-block;
+  }
+  p {
+    display: block;
+    margin: auto;
+  }
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 0.3fr 1fr 2fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  padding-top: 100px;
+}
+
+.introduction {
+  grid-column: 2 /span 2;
+  grid-row: 2 /span 2;
+  font-size: 50px;
+  perspective: 1000px;
+  perspective-origin: 200px 40px;
+}
+
+
+.technologies-list {
+  font-size: 12px;
+  letter-spacing: 3px;
+  color: #A5288E;
+}
+
+.intro-letters {
+  transition: transform 300ms ease-in-out;
+  display: inline-block;
+}
+
+.intro-letters:hover {
+  -webkit-transform: scale(1.2, 0.8);
+  transform: scale(1.2, 0.8);
+  color: #FD777F;
+  text-shadow:
+    -2px -2px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+.intro-spacing {
+  padding-right: 5px;
+}
+
+.initials {
+  grid-column: 3;
+  grid-row: 1 /span 3;
+  font-size: 20em;
+  color: #475CDA;
+  text-shadow: -10px -10px 0 #000;
+  transform: rotate(-20deg);
+  z-index: -1;
+}
+
+.nav-links {
+  visibility: hidden;
+}
+
+.nav-links:hover {
+  visibility: visible;
+  background-color: #A5288E;
+  padding: 2px;
+  font-weight: bold;
+}
