@@ -11,11 +11,16 @@ body {
 
   nav {
     float: right;
+    height: 30vh;
+    width: 150px;
+    text-align: right;
     font-family: 'Raleway', sans-serif;
     margin-right: 0;
     background-color: #C84C85;
     font-weight: bold;
     color: white;
+    font-size: 14px;
+    opacity: 0.8;
   }
 
   nav a {
@@ -35,6 +40,18 @@ body {
     display: block;
     margin: auto;
   }
+}
+
+#home-nav-hover:hover {
+  background-color: black;
+}
+
+#about-nav-hover:hover {
+  background-color: #5CAAAC;
+}
+
+#work-nav-hover:hover {
+  background-color: #4A5fD3;
 }
 
 .container {
@@ -91,20 +108,11 @@ body {
   margin-left: 0;
 }
 
-.nav-links {
-  visibility: hidden;
-}
-
-.nav-links:hover {
-  visibility: visible;
-  background-color: #A5288E;
-  padding: 2px;
-  font-weight: bold;
-}
-
 .technology-large-list {
   grid-column: 4;
   grid-row: 1 /span 2;
+  margin-top: 20px;
+  z-index: -1;
 }
 
 .technology-names {
