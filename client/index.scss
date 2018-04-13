@@ -10,13 +10,21 @@ body {
   }
 
   nav {
+    float: right;
     font-family: 'Raleway', sans-serif;
-    text-align: center;
+    margin-right: 0;
+    background-color: #C84C85;
+    font-weight: bold;
+    color: white;
   }
 
   nav a {
-    display: inline-block;
+    display: block;
     margin: 1em;
+  }
+
+  nav a:visited {
+    color: white;
   }
 
   form div {
@@ -31,7 +39,7 @@ body {
 
 .container {
   display: grid;
-  grid-template-columns: 0.3fr 1fr 2fr 1fr;
+  grid-template-columns: 0.3fr 0.5fr 1fr 2fr 1fr;
   grid-template-rows: repeat(3, 1fr);
   padding-top: 100px;
 }
@@ -45,7 +53,7 @@ body {
 }
 
 
-.technologies-list {
+.technologies-small-list {
   font-size: 12px;
   letter-spacing: 3px;
   color: #A5288E;
@@ -79,7 +87,8 @@ body {
   color: #475CDA;
   text-shadow: -10px -10px 0 #000;
   transform: rotate(-20deg);
-  z-index: -1;
+  z-index: -2;
+  margin-left: 0;
 }
 
 .nav-links {
@@ -93,20 +102,20 @@ body {
   font-weight: bold;
 }
 
+.technology-large-list {
+  grid-column: 4;
+  grid-row: 1 /span 2;
+}
+
 .technology-names {
   font-family: monospace;
   font-size: 20px;
-  grid-column: 3;
-  grid-row: 1;
   transform: rotate(-20deg);
   color: #7A8A88;
+  z-index: -1;
+  padding: 5px;
 }
 
-#html {
-  margin-left: 0;
-  padding-bottom: 40px;
-}
-
-#css {
-  margin-left: 50px;
+.technology-names:hover {
+  color: purple;
 }

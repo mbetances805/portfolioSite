@@ -7,27 +7,16 @@ import {HomePage} from './index'
 const Main = (props) => {
   const {children} = props
   const introText = [['Hi,'], ["I'm Maria."], ['A Full Stack'], ['Developer.']]
+  const technologiesList = ['HTML5', 'CSS3', 'Express.js', 'SQL', 'React', 'Node.js',
+    'JavaScript', 'Redux', 'Python']
   let key = 1
 
   return (
     <div>
       <nav>
-        <Link to='/'>
-          <div className='nav-links' />
-          Home
-        </Link>
-        <Link to='/'>
-          <div className='nav-links' />
-          About
-        </Link>
-        <Link to='./'>
-          <div className='nav-links' />
-          Skills
-        </Link>
-        <Link to='./'>
-          <div className='nav-links' />
-          Projects
-        </Link>
+        <Link to='/' className='home-nav-hover'>Home</Link>
+        <Link to='/' className='about-nav-hover'>About</Link>
+        <Link to='/' className='projects-nav-hover'>Projects</Link>
       </nav>
       <div className='container'>
         <div className='introduction'>
@@ -47,11 +36,21 @@ const Main = (props) => {
               </p>
             })
             }
-          <p className='technologies-list'>{'Node.js / React / Redux / Python'}</p>
+          <p className='technologies-small-list'>{'Node.js / React / Redux / Python'}</p>
         </div>
         <p className='initials'>{'MB'}</p>
-        <p className='technology-names' id='html'>{'HTML5'}</p>
-        <p className='technology-names' id='css'>{'CSS3'}</p>
+        <div className='technology-large-list'>
+          {
+            technologiesList.map(technology => {
+              return <p
+                className='technology-names'
+                id={technology.toLowerCase()}
+                key={`${technology.toLowerCase()}-${key++}`}>
+                {technology}
+              </p>
+            })
+          }
+        </div>
       </div>
     </div>
   )
