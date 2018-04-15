@@ -10,25 +10,31 @@ body {
   }
 
   nav {
-    float: right;
-    height: 30vh;
+    float: left;
+    height: 150px;
     width: 150px;
-    text-align: right;
+    text-align: left;
     font-family: 'Raleway', sans-serif;
     margin-right: 0;
-    background-color: #C84C85;
     font-weight: bold;
-    color: white;
+    color: black;
     font-size: 14px;
     opacity: 0.8;
+    transition: all 500ms ease-in-out;
+    z-index: 11;
   }
 
   nav a {
-    display: block;
+    display: inline-block;
     margin: 1em;
+    letter-spacing: 3px;
   }
 
   nav a:visited {
+    color: black;
+  }
+
+  nav a:visited:hover {
     color: white;
   }
 
@@ -43,21 +49,34 @@ body {
 }
 
 #home-nav-hover:hover {
-  background-color: black;
+  background-color: #C84C85;
+  color: white;
 }
 
 #about-nav-hover:hover {
   background-color: #5CAAAC;
+  color: white;
 }
 
 #work-nav-hover:hover {
   background-color: #4A5fD3;
+  color: white;
+}
+
+#home-nav-hover:hover > .slider {
+  display: inline;
+}
+
+.slider {
+  display: none;
 }
 
 .container {
   display: grid;
-  grid-template-columns: 0.3fr 0.5fr 1fr 2fr 1fr;
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: 2fr 0.5fr 1fr 2fr 1fr;
+  grid-template-rows: repeat(12, 1fr);
+  position: relative;
+  height: 600px;
   padding-top: 100px;
 }
 
@@ -67,18 +86,17 @@ body {
   font-size: 50px;
   perspective: 1000px;
   perspective-origin: 200px 40px;
+  z-index: 2;
 }
 
-
-.technologies-small-list {
-  font-size: 12px;
-  letter-spacing: 3px;
+#m-letter {
   color: #A5288E;
 }
 
 .intro-letters {
   transition: transform 300ms ease-in-out;
   display: inline-block;
+  text-shadow: 2px 2px white;
 }
 
 .intro-letters:hover {
@@ -99,31 +117,68 @@ body {
 .initials {
   display: inline-block;
   grid-column: 3;
-  grid-row: 1 /span 3;
+  grid-row: 3 /span 3;
+  padding-left: 100px;
   font-size: 20em;
   color: #475CDA;
   text-shadow: -10px -10px 0 #000;
   transform: rotate(-20deg);
-  z-index: -2;
-  margin-left: 0;
+  z-index: 1;
 }
 
 .technology-large-list {
-  grid-column: 4;
+  grid-column: 3 /span 2;
   grid-row: 1 /span 2;
-  margin-top: 20px;
+  padding-left: 550px;
+  margin-top: 200px;
   z-index: -1;
 }
 
 .technology-names {
   font-family: monospace;
-  font-size: 20px;
+  font-size: 16px;
   transform: rotate(-20deg);
-  color: #7A8A88;
   z-index: -1;
   padding: 5px;
+  letter-spacing: 3px;
+  opacity: 0.5;
 }
 
 .technology-names:hover {
   color: purple;
+}
+
+.slider {
+  display: inline;
+  height: 2px;
+  width: 2px;
+  border-top: 1px solid blue;
+  background-color: yellow;
+  transition: all 1s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+}
+
+.slider:hover {
+  right: 0;
+  color: pink;
+}
+
+.dot {
+  opacity: 0;
+  transition: all 1s ease-in-out;
+}
+
+#first-dot {
+  grid-column: 4;
+  grid-row: 2;
+}
+
+#second-dot {
+  grid-column: 4;
+  grid-row: 5;
+}
+
+#third-dot {
+  grid-column: 3;
+  grid-row: 6;
 }

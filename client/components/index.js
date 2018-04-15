@@ -4,4 +4,4 @@
  * having to figure out which file they belong to!
  */
 export {default as Main} from './Main'
-export {default as HomePage} from './HomePage'
+export {default as Dot} from './Dot'

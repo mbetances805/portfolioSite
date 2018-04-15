@@ -2476,12 +2476,12 @@ Object.defineProperty(exports, 'Main', {
   }
 });
 
-var _HomePage = __webpack_require__(88);
+var _Dot = __webpack_require__(156);
 
-Object.defineProperty(exports, 'HomePage', {
+Object.defineProperty(exports, 'Dot', {
   enumerable: true,
   get: function get() {
-    return _interopRequireDefault(_HomePage).default;
+    return _interopRequireDefault(_Dot).default;
   }
 });
 
@@ -6266,95 +6266,7 @@ module.exports = function spread(callback) {
 
 
 /***/ }),
-/* 88 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(1);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _propTypes = __webpack_require__(2);
-
-var _propTypes2 = _interopRequireDefault(_propTypes);
-
-var _reactRedux = __webpack_require__(10);
-
-var _reactRouterDom = __webpack_require__(25);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var HomePage = function (_Component) {
-  _inherits(HomePage, _Component);
-
-  function HomePage() {
-    _classCallCheck(this, HomePage);
-
-    return _possibleConstructorReturn(this, (HomePage.__proto__ || Object.getPrototypeOf(HomePage)).apply(this, arguments));
-  }
-
-  _createClass(HomePage, [{
-    key: 'componentDidMount',
-    value: function componentDidMount() {
-      var canvas = this.refs.canvas;
-      var stage = new createjs.Stage(canvas);
-      var circle = new createjs.Shape();
-      circle.graphics.beginFill('DeepSkyBlue').drawCircle(50, 50, 50);
-      circle.x = circle.y = 100;
-      stage.addChild(circle);
-      stage.update();
-      createjs.Tween.get(circle, { loop: true }).to({ x: 600 }, 1000, createjs.Ease.getPowInOut(4)).to({ alpha: 0, y: 75 }, 500, createjs.Ease.getPowInOut(2)).to({ alpha: 0, y: 125 }, 100).to({ alpha: 1, y: 100 }, 500, createjs.Ease.getPowInOut(2)).to({ x: 100 }, 800, createjs.Ease.getPowInOut(2));
-      createjs.Ticker.setFPS(60);
-      createjs.Ticker.addEventListener("tick", stage);
-    }
-  }, {
-    key: 'render',
-    value: function render() {
-      return _react2.default.createElement(
-        'div',
-        null,
-        _react2.default.createElement('canvas', { ref: 'canvas', width: '800', height: '200' })
-      );
-    }
-  }]);
-
-  return HomePage;
-}(_react.Component);
-
-/**
- * CONTAINER
- */
-
-
-var mapState = null;
-
-var mapDispatch = null;
-
-// The `withRouter` wrapper makes sure that updates are not blocked
-// when the url changes
-exports.default = (0, _reactRouterDom.withRouter)((0, _reactRedux.connect)(mapState, mapDispatch)(HomePage));
-
-/**
- * PROP TYPES
- */
-
-HomePage.propTypes = {};
-
-/***/ }),
+/* 88 */,
 /* 89 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -6382,10 +6294,9 @@ var _index = __webpack_require__(34);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Main = function Main(props) {
-  var children = props.children;
-
+  // const {children} = props
   var introText = [['Hi,'], ["I'm Maria."], ['A Full Stack'], ['Developer.']];
-  var technologiesList = ['HTML5', 'CSS3', 'Express.js', 'SQL', 'React', 'Node.js', 'JavaScript', 'Redux', 'Python'];
+  var technologiesList = ['Node.js', 'React', 'Redux', 'Python', 'Express.js', 'SQL', 'CSS3', 'HTML5'];
   var key = 1;
 
   var changeNavColor = function changeNavColor(e) {
@@ -6406,6 +6317,13 @@ var Main = function Main(props) {
     }
   };
 
+  var showDots = function showDots() {
+    var dots = document.querySelectorAll('.dot');
+    dots.forEach(function (dot) {
+      dot.style.opacity = 0.2;
+    });
+  };
+
   return _react2.default.createElement(
     'div',
     null,
@@ -6418,23 +6336,26 @@ var Main = function Main(props) {
       },
       _react2.default.createElement(
         _reactRouterDom.Link,
-        { to: '/' },
+        { to: '/', id: 'home-link' },
         'HOME'
       ),
+      _react2.default.createElement('div', { className: 'slider' }),
       _react2.default.createElement(
         _reactRouterDom.Link,
-        { to: '/' },
+        { to: '/', id: 'about-link' },
         'ABOUT'
       ),
+      _react2.default.createElement('div', { className: 'slider' }),
       _react2.default.createElement(
         _reactRouterDom.Link,
-        { to: '/' },
+        { to: '/', id: 'work-link' },
         'WORK'
-      )
+      ),
+      _react2.default.createElement('div', { className: 'slider' })
     ),
     _react2.default.createElement(
       'div',
-      { className: 'container' },
+      { className: 'container', onMouseOver: showDots },
       _react2.default.createElement(
         'div',
         { className: 'introduction' },
@@ -6451,20 +6372,23 @@ var Main = function Main(props) {
                   letter
                 );
               } else {
-                return _react2.default.createElement(
-                  'span',
-                  { className: 'intro-letters', key: letter + '-' + key++ },
-                  letter
-                );
+                if (letter === 'M') {
+                  return _react2.default.createElement(
+                    'span',
+                    { className: 'intro-letters', id: 'm-letter', key: letter + '-' + key++ },
+                    letter
+                  );
+                } else {
+                  return _react2.default.createElement(
+                    'span',
+                    { className: 'intro-letters', key: letter + '-' + key++ },
+                    letter
+                  );
+                }
               }
             })
           );
-        }),
-        _react2.default.createElement(
-          'p',
-          { className: 'technologies-small-list' },
-          'Node.js / React / Redux / Python'
-        )
+        })
       ),
       _react2.default.createElement(
         'p',
@@ -6479,12 +6403,15 @@ var Main = function Main(props) {
             'p',
             {
               className: 'technology-names',
-              id: technology.toLowerCase(),
+              id: technology.toLowerCase().replace(/\./g, '-'),
               key: technology.toLowerCase() + '-' + key++ },
             technology
           );
         })
-      )
+      ),
+      _react2.default.createElement(_index.Dot, { id: 'first-dot', radius: '30' }),
+      _react2.default.createElement(_index.Dot, { id: 'second-dot', radius: '50' }),
+      _react2.default.createElement(_index.Dot, { id: 'third-dot', radius: '20' })
     )
   );
 };
@@ -6648,7 +6575,7 @@ exports = module.exports = __webpack_require__(93)();
 
 
 // module
-exports.push([module.i, "body {\n  font-family: 'PT Sans', sans-serif; }\n  body a {\n    text-decoration: none; }\n  body label {\n    display: block; }\n  body nav {\n    float: right;\n    height: 30vh;\n    width: 150px;\n    text-align: right;\n    font-family: 'Raleway', sans-serif;\n    margin-right: 0;\n    background-color: #C84C85;\n    font-weight: bold;\n    color: white;\n    font-size: 14px;\n    opacity: 0.8; }\n  body nav a {\n    display: block;\n    margin: 1em; }\n  body nav a:visited {\n    color: white; }\n  body form div {\n    margin: 1em;\n    display: inline-block; }\n  body p {\n    display: block;\n    margin: auto; }\n\n#home-nav-hover:hover {\n  background-color: black; }\n\n#about-nav-hover:hover {\n  background-color: #5CAAAC; }\n\n#work-nav-hover:hover {\n  background-color: #4A5fD3; }\n\n.container {\n  display: grid;\n  grid-template-columns: 0.3fr 0.5fr 1fr 2fr 1fr;\n  grid-template-rows: repeat(3, 1fr);\n  padding-top: 100px; }\n\n.introduction {\n  grid-column: 2 /span 2;\n  grid-row: 2 /span 2;\n  font-size: 50px;\n  perspective: 1000px;\n  perspective-origin: 200px 40px; }\n\n.technologies-small-list {\n  font-size: 12px;\n  letter-spacing: 3px;\n  color: #A5288E; }\n\n.intro-letters {\n  transition: transform 300ms ease-in-out;\n  display: inline-block; }\n\n.intro-letters:hover {\n  -webkit-transform: scale(1.2, 0.8);\n  transform: scale(1.2, 0.8);\n  color: #FD777F;\n  text-shadow: -2px -2px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; }\n\n.intro-spacing {\n  padding-right: 5px; }\n\n.initials {\n  display: inline-block;\n  grid-column: 3;\n  grid-row: 1 /span 3;\n  font-size: 20em;\n  color: #475CDA;\n  text-shadow: -10px -10px 0 #000;\n  transform: rotate(-20deg);\n  z-index: -2;\n  margin-left: 0; }\n\n.technology-large-list {\n  grid-column: 4;\n  grid-row: 1 /span 2;\n  margin-top: 20px;\n  z-index: -1; }\n\n.technology-names {\n  font-family: monospace;\n  font-size: 20px;\n  transform: rotate(-20deg);\n  color: #7A8A88;\n  z-index: -1;\n  padding: 5px; }\n\n.technology-names:hover {\n  color: purple; }\n", ""]);
+exports.push([module.i, "body {\n  font-family: 'PT Sans', sans-serif; }\n  body a {\n    text-decoration: none; }\n  body label {\n    display: block; }\n  body nav {\n    float: left;\n    height: 150px;\n    width: 150px;\n    text-align: left;\n    font-family: 'Raleway', sans-serif;\n    margin-right: 0;\n    font-weight: bold;\n    color: black;\n    font-size: 14px;\n    opacity: 0.8;\n    transition: all 500ms ease-in-out;\n    z-index: 11; }\n  body nav a {\n    display: inline-block;\n    margin: 1em;\n    letter-spacing: 3px; }\n  body nav a:visited {\n    color: black; }\n  body nav a:visited:hover {\n    color: white; }\n  body form div {\n    margin: 1em;\n    display: inline-block; }\n  body p {\n    display: block;\n    margin: auto; }\n\n#home-nav-hover:hover {\n  background-color: #C84C85;\n  color: white; }\n\n#about-nav-hover:hover {\n  background-color: #5CAAAC;\n  color: white; }\n\n#work-nav-hover:hover {\n  background-color: #4A5fD3;\n  color: white; }\n\n#home-nav-hover:hover > .slider {\n  display: inline; }\n\n.slider {\n  display: none; }\n\n.container {\n  display: grid;\n  grid-template-columns: 2fr 0.5fr 1fr 2fr 1fr;\n  grid-template-rows: repeat(12, 1fr);\n  position: relative;\n  height: 600px;\n  padding-top: 100px; }\n\n.introduction {\n  grid-column: 2 /span 2;\n  grid-row: 2 /span 2;\n  font-size: 50px;\n  perspective: 1000px;\n  perspective-origin: 200px 40px;\n  z-index: 2; }\n\n#m-letter {\n  color: #A5288E; }\n\n.intro-letters {\n  transition: transform 300ms ease-in-out;\n  display: inline-block;\n  text-shadow: 2px 2px white; }\n\n.intro-letters:hover {\n  -webkit-transform: scale(1.2, 0.8);\n  transform: scale(1.2, 0.8);\n  color: #FD777F;\n  text-shadow: -2px -2px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; }\n\n.intro-spacing {\n  padding-right: 5px; }\n\n.initials {\n  display: inline-block;\n  grid-column: 3;\n  grid-row: 3 /span 3;\n  padding-left: 100px;\n  font-size: 20em;\n  color: #475CDA;\n  text-shadow: -10px -10px 0 #000;\n  transform: rotate(-20deg);\n  z-index: 1; }\n\n.technology-large-list {\n  grid-column: 3 /span 2;\n  grid-row: 1 /span 2;\n  padding-left: 550px;\n  margin-top: 200px;\n  z-index: -1; }\n\n.technology-names {\n  font-family: monospace;\n  font-size: 16px;\n  transform: rotate(-20deg);\n  z-index: -1;\n  padding: 5px;\n  letter-spacing: 3px;\n  opacity: 0.5; }\n\n.technology-names:hover {\n  color: purple; }\n\n.slider {\n  display: inline;\n  height: 2px;\n  width: 2px;\n  border-top: 1px solid blue;\n  background-color: yellow;\n  transition: all 1s ease-in-out;\n  -webkit-transition: all 1s ease-in-out; }\n\n.slider:hover {\n  right: 0;\n  color: pink; }\n\n.dot {\n  opacity: 0;\n  transition: all 1s ease-in-out; }\n\n#first-dot {\n  grid-column: 4;\n  grid-row: 2; }\n\n#second-dot {\n  grid-column: 4;\n  grid-row: 5; }\n\n#third-dot {\n  grid-column: 3;\n  grid-row: 6; }\n", ""]);
 
 // exports
 
@@ -30205,6 +30132,94 @@ module.exports = function(originalModule) {
 	return module;
 };
 
+
+/***/ }),
+/* 156 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(2);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _reactRedux = __webpack_require__(10);
+
+var _reactRouterDom = __webpack_require__(25);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Dot = function (_Component) {
+  _inherits(Dot, _Component);
+
+  function Dot() {
+    _classCallCheck(this, Dot);
+
+    return _possibleConstructorReturn(this, (Dot.__proto__ || Object.getPrototypeOf(Dot)).apply(this, arguments));
+  }
+
+  _createClass(Dot, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      var radius = this.props.radius;
+
+      var canvas = this.refs.canvas;
+      var stage = new createjs.Stage(canvas);
+      var circle = new createjs.Shape();
+      circle.graphics.beginFill('DeepSkyBlue').drawCircle(0, 0, radius);
+      circle.x = circle.y = 50;
+      stage.addChild(circle);
+      stage.update();
+      // createjs.Tween.get(circle, {loop: true})
+      //   .to({x: 600}, 1000, createjs.Ease.getPowInOut(4))
+      //   .to({alpha: 0, y: 75}, 500, createjs.Ease.getPowInOut(2))
+      //   .to({alpha: 0, y: 125}, 100)
+      //   .to({alpha: 1, y: 100}, 500, createjs.Ease.getPowInOut(2))
+      //   .to({x: 100}, 800, createjs.Ease.getPowInOut(2));
+      // createjs.Ticker.setFPS(60);
+      // createjs.Ticker.addEventListener("tick", stage);
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var id = this.props.id;
+
+      return _react2.default.createElement(
+        'div',
+        { className: 'dot', id: id },
+        _react2.default.createElement('canvas', { ref: 'canvas', width: '200', height: '200' })
+      );
+    }
+  }]);
+
+  return Dot;
+}(_react.Component);
+
+var mapState = null;
+
+var mapDispatch = null;
+
+exports.default = (0, _reactRouterDom.withRouter)((0, _reactRedux.connect)(mapState, mapDispatch)(Dot));
+
+
+Dot.propTypes = {};
 
 /***/ })
 /******/ ]);
