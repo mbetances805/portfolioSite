@@ -2,14 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
 import {withRouter, Link} from 'react-router-dom'
-import {Dot} from './index'
 
 const Main = (props) => {
-  // const {children} = props
-  const introText = [['Hi,'], ["I'm Maria."], ['A Full Stack'], ['Developer.']]
-  const technologiesList = ['Node.js', 'React', 'Redux', 'Python',
-    'Express.js', 'SQL', 'CSS3', 'HTML5']
-  let key = 1
+  const {children} = props
 
   const changeNavColor = (e) => {
     let navBar = document.getElementsByClassName('home-nav-bar')
@@ -31,13 +26,6 @@ const Main = (props) => {
     }
   }
 
-  const showDots = () => {
-    let dots = document.querySelectorAll('.dot')
-    dots.forEach(dot => {
-      dot.style.opacity = 0.2
-    })
-  }
-
   return (
     <div>
       <nav
@@ -45,50 +33,11 @@ const Main = (props) => {
         onMouseOver={changeNavColor}
         onMouseOut={resetNavColor}
       >
-        <Link to='/' id='home-link'>HOME</Link><div className='slider' />
-        <Link to='/' id='about-link'>ABOUT</Link><div className='slider' />
-        <Link to='/' id='work-link'>WORK</Link><div className='slider' />
+        <Link to='/' id='home-link'>HOME</Link>
+        <Link to='/about' id='about-link'>ABOUT</Link>
+        <Link to='/work' id='work-link'>WORK</Link>
       </nav>
-      <div className='container' onMouseOver={showDots}>
-        <div className='introduction'>
-          {
-            introText.map(message => {
-              let text = message[0].split('')
-              return <p key={`${message}-${key++}`}>
-                {
-                  text.map(letter => {
-                    if (letter === ' ') {
-                      return <span className='intro-spacing' key={`${letter}-${key++}`}>{letter}</span>
-                    } else {
-                      if (letter === 'M') {
-                        return <span className='intro-letters' id='m-letter' key={`${letter}-${key++}`}>{letter}</span>
-                      } else {
-                        return <span className='intro-letters' key={`${letter}-${key++}`}>{letter}</span>
-                      }
-                    }
-                  })
-                }
-              </p>
-            })
-          }
-        </div>
-        <p className='initials'>{'MB'}</p>
-        <div className='technology-large-list'>
-          {
-            technologiesList.map(technology => {
-              return <p
-                className='technology-names'
-                id={technology.toLowerCase().replace(/\./g, '-')}
-                key={`${technology.toLowerCase()}-${key++}`}>
-                {technology}
-              </p>
-            })
-          }
-        </div>
-        <Dot id='first-dot' radius={'30'} />
-        <Dot id='second-dot' radius={'50'} />
-        <Dot id='third-dot' radius={'20'} />
-      </div>
+      {children}
     </div>
   )
 }

@@ -5,11 +5,12 @@ import {withRouter} from 'react-router-dom'
 
 class Dot extends Component {
   componentDidMount () {
-    let { radius } = this.props
+    let {radius} = this.props
+    let {color} = this.props
     let canvas = this.refs.canvas
     let stage = new createjs.Stage(canvas)
     let circle = new createjs.Shape()
-    circle.graphics.beginFill('DeepSkyBlue').drawCircle(0, 0, radius)
+    circle.graphics.beginFill(color).drawCircle(0, 0, radius)
     circle.x = circle.y = 50
     stage.addChild(circle)
     stage.update()
@@ -27,7 +28,7 @@ class Dot extends Component {
     let { id } = this.props
     return (
       <div className='dot' id={id}>
-        <canvas ref='canvas' width='200' height='200'></canvas>
+        <canvas ref='canvas' width='100' height='100'></canvas>
       </div>
     )
   }

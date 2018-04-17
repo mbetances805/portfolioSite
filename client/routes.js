@@ -4,7 +4,7 @@ import {Router} from 'react-router'
 import {Route, Switch} from 'react-router-dom'
 import PropTypes from 'prop-types'
 import history from './history'
-import {Main} from './components'
+import {Main, About, Home, Work} from './components'
 
 /**
  * COMPONENT
@@ -15,7 +15,9 @@ class Routes extends Component {
       <Router history={history}>
         <Main>
           <Switch>
-            <Route path='/home' component={Main} />
+            <Route exact path='/' component={Home} />
+            <Route path='/about' component={About} />
+            <Route path='/work' component={Work} />
           </Switch>
         </Main>
       </Router>
