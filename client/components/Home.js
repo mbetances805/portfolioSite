@@ -6,7 +6,7 @@ import {Dot} from './index'
 const Home = (props) => {
   // const {children} = props
   const introText = [['Hi,'], ["I'm Maria."], ['A Full Stack'], ['Developer.']]
-  const technologiesList = ['Node.js', 'React', 'Redux', 'Python',
+  const technologiesList = ['Node.js', 'JavaScript', 'React', 'Redux', 'Python',
     'Express.js', 'SQL', 'CSS3', 'HTML5']
   let key = 1
 

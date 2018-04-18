@@ -6337,13 +6337,77 @@ var About = function About() {
       width: '200vw',
       height: '225vh'
     }),
+    _react2.default.createElement(
+      'div',
+      { className: 'about-links' },
+      _react2.default.createElement(
+        'a',
+        { href: 'https://github.com/mbetances805' },
+        _react2.default.createElement('img', {
+          src: 'https://image.flaticon.com/icons/svg/25/25231.svg',
+          width: '25px',
+          height: '25px'
+        })
+      ),
+      _react2.default.createElement(
+        'a',
+        { href: 'https://www.linkedin.com/in/mariabetances/' },
+        _react2.default.createElement('img', {
+          src: 'https://image.flaticon.com/icons/svg/25/25320.svg',
+          width: '25px',
+          height: '25px'
+        })
+      ),
+      _react2.default.createElement(
+        'a',
+        { href: 'https://medium.com/@mbetances1002' },
+        _react2.default.createElement('img', {
+          src: 'https://image.flaticon.com/icons/svg/725/725376.svg',
+          width: '25px',
+          height: '25px'
+        })
+      ),
+      _react2.default.createElement(
+        'a',
+        { href: '' },
+        _react2.default.createElement('img', {
+          src: 'https://image.flaticon.com/icons/svg/559/559233.svg',
+          width: '25px',
+          height: '25px'
+        })
+      )
+    ),
     _react2.default.createElement(_index.Dot, { id: 'fourth-dot', radius: '20', color: 'DeepSkyBlue' }),
     _react2.default.createElement(_index.Dot, { id: 'fifth-dot', radius: '50', color: '#D2BBEE' }),
     _react2.default.createElement(_index.Dot, { id: 'sixth-dot', radius: '40', color: '#4A5fD3' }),
     _react2.default.createElement(
-      'p',
+      'div',
       { className: 'about-paragraph' },
-      'Of recommend residence education be on difficult repulsive offending. Judge views had mirth table seems great him for her. Alone all happy asked begin fully stand own get. Excuse ye seeing result of we. See scale dried songs old may not. Promotion did disposing you household any instantly. Hills we do under times at first short an. On projection apartments unsatiable so if he entreaties appearance. Rose you wife how set lady half wish. Hard sing an in true felt. Welcomed stronger if steepest ecstatic an suitable finished of oh.'
+      _react2.default.createElement(
+        'p',
+        { className: 'about-paragraph-list' },
+        'Web Developer'
+      ),
+      _react2.default.createElement(
+        'p',
+        { className: 'about-paragraph-list' },
+        'Analytical'
+      ),
+      _react2.default.createElement(
+        'p',
+        { className: 'about-paragraph-list' },
+        'Passionate'
+      ),
+      _react2.default.createElement(
+        'p',
+        { className: 'about-paragraph-list' },
+        'Vegan Foodie'
+      )
+    ),
+    _react2.default.createElement(
+      'p',
+      { className: 'initials', id: 'about-initials' },
+      'MB'
     )
   );
 };
@@ -6469,7 +6533,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var Home = function Home(props) {
   // const {children} = props
   var introText = [['Hi,'], ["I'm Maria."], ['A Full Stack'], ['Developer.']];
-  var technologiesList = ['Node.js', 'React', 'Redux', 'Python', 'Express.js', 'SQL', 'CSS3', 'HTML5'];
+  var technologiesList = ['Node.js', 'JavaScript', 'React', 'Redux', 'Python', 'Express.js', 'SQL', 'CSS3', 'HTML5'];
   var key = 1;
 
   var showDots = function showDots() {
@@ -6658,97 +6722,283 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(8);
-
 var _reactRedux = __webpack_require__(6);
 
-var _chatRandomMockup = __webpack_require__(105);
+var _reactRouterDom = __webpack_require__(8);
 
-var _chatRandomMockup2 = _interopRequireDefault(_chatRandomMockup);
+var _ChatRandomHome = __webpack_require__(161);
+
+var _ChatRandomHome2 = _interopRequireDefault(_ChatRandomHome);
+
+var _ChatRandomSignIn = __webpack_require__(162);
+
+var _ChatRandomSignIn2 = _interopRequireDefault(_ChatRandomSignIn);
+
+var _ChatRandomChatting = __webpack_require__(163);
+
+var _ChatRandomChatting2 = _interopRequireDefault(_ChatRandomChatting);
+
+var _toDoHome = __webpack_require__(165);
+
+var _toDoHome2 = _interopRequireDefault(_toDoHome);
+
+var _toDoList = __webpack_require__(166);
+
+var _toDoList2 = _interopRequireDefault(_toDoList);
+
+var _toDoDashboard = __webpack_require__(164);
+
+var _toDoDashboard2 = _interopRequireDefault(_toDoDashboard);
+
+var _index = __webpack_require__(18);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var technologies = ['React-Redux', 'Node.js', 'Express', 'SCSS'];
-var key = 1;
-
 var Work = function Work() {
+  var showDots = function showDots() {
+    var dots = document.querySelectorAll('.dot');
+    dots.forEach(function (dot) {
+      dot.style.opacity = 0.2;
+    });
+  };
   return _react2.default.createElement(
     'div',
-    null,
-    _react2.default.createElement(
-      'h2',
-      { className: 'work-section' },
-      'Personal Projects'
-    ),
+    { className: 'about-container', onMouseOver: showDots },
+    _react2.default.createElement(_index.Dot, { id: 'fourth-dot', radius: '20', color: 'DeepSkyBlue' }),
+    _react2.default.createElement(_index.Dot, { id: 'sixth-dot', radius: '40', color: '#4A5fD3' }),
     _react2.default.createElement(
       'div',
       { className: 'work-container' },
       _react2.default.createElement(
         'div',
-        { className: 'work-title' },
+        { className: 'work-section' },
         _react2.default.createElement(
-          'div',
-          {
-            className: 'work-summary' },
-          'Chat with strangers online!'
+          'p',
+          { className: 'work-title' },
+          _react2.default.createElement(
+            'a',
+            { href: 'https://chatrandom.herokuapp.com/' },
+            _react2.default.createElement(
+              'span',
+              null,
+              'Chat Random'
+            )
+          )
         ),
         _react2.default.createElement(
-          'a',
-          { href: 'https://chatrandom.herokuapp.com/' },
+          'div',
+          { className: 'work-stack' },
           _react2.default.createElement(
-            'h2',
+            'p',
             null,
-            'Chat Random'
+            'Node.js'
+          ),
+          _react2.default.createElement(
+            'p',
+            null,
+            'JavaScript'
+          ),
+          _react2.default.createElement(
+            'p',
+            null,
+            'React-Redux'
+          ),
+          _react2.default.createElement(
+            'p',
+            null,
+            'HTML5'
+          ),
+          _react2.default.createElement(
+            'p',
+            null,
+            'SCSS'
+          ),
+          _react2.default.createElement(
+            'p',
+            null,
+            'Socket.io'
           )
         ),
         _react2.default.createElement('img', {
-          src: _chatRandomMockup2.default,
-          className: 'chat-random-mockup',
-          width: '550vw',
-          height: '400vh'
+          src: _ChatRandomHome2.default,
+          className: 'work-image-one'
+        }),
+        _react2.default.createElement('img', {
+          src: _ChatRandomSignIn2.default,
+          className: 'work-image-two'
+        }),
+        _react2.default.createElement('img', {
+          src: _ChatRandomChatting2.default,
+          className: 'work-image-three'
         }),
         _react2.default.createElement(
-          'p',
-          null,
-          "A messenger that uses the application's state " + 'to track sessions, users, and messages.'
-        ),
-        _react2.default.createElement(
           'div',
-          { className: 'work-tech-list' },
-          technologies.map(function (technology) {
-            return _react2.default.createElement(
-              'div',
-              { className: 'work-technologies', key: technology + '-' + key },
-              technology
-            );
-          })
+          { className: 'work-summary' },
+          "Chat with a stranger online! " + "Chat Random is a messenger that leverages the " + "application's state to manage sessions, users, and messages. " + "Upon entering a username, users are paired " + "with other available users and they are able to " + "chat away!"
         )
       ),
       _react2.default.createElement(
-        'h3',
-        { className: 'work-title' },
-        'toDo'
+        'div',
+        { className: 'work-section' },
+        _react2.default.createElement(
+          'p',
+          { className: 'work-title' },
+          _react2.default.createElement(
+            'a',
+            { href: 'https://daily-to-do-list.herokuapp.com/welcome' },
+            _react2.default.createElement(
+              'span',
+              null,
+              'toDo'
+            )
+          )
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'work-stack' },
+          _react2.default.createElement(
+            'p',
+            null,
+            'Node.js'
+          ),
+          _react2.default.createElement(
+            'p',
+            null,
+            'JavaScript'
+          ),
+          _react2.default.createElement(
+            'p',
+            null,
+            'React-Redux'
+          ),
+          _react2.default.createElement(
+            'p',
+            null,
+            'HTML5'
+          ),
+          _react2.default.createElement(
+            'p',
+            null,
+            'SCSS'
+          ),
+          _react2.default.createElement(
+            'p',
+            null,
+            'PostgreSQL'
+          ),
+          _react2.default.createElement(
+            'p',
+            null,
+            'Express'
+          ),
+          _react2.default.createElement(
+            'p',
+            null,
+            'D3.js'
+          )
+        ),
+        _react2.default.createElement('img', {
+          src: _toDoHome2.default,
+          className: 'work-image-one'
+        }),
+        _react2.default.createElement('img', {
+          src: _toDoList2.default,
+          className: 'work-image-two'
+        }),
+        _react2.default.createElement('img', {
+          src: _toDoDashboard2.default,
+          className: 'work-image-three'
+        }),
+        _react2.default.createElement(
+          'div',
+          { className: 'work-summary' },
+          "Track your daily list of to do's with a simple and clean design. " + "Includes descriptive statistics on your productivity."
+        )
       ),
       _react2.default.createElement(
-        'h3',
-        { className: 'work-title' },
-        'IdeaStorm'
+        'div',
+        { className: 'work-section' },
+        _react2.default.createElement(
+          'p',
+          { className: 'work-title' },
+          _react2.default.createElement(
+            'a',
+            { href: 'https://idea-storm.herokuapp.com/' },
+            _react2.default.createElement(
+              'span',
+              null,
+              'IdeaStorm'
+            )
+          )
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'work-stack' },
+          _react2.default.createElement(
+            'p',
+            null,
+            'Node.js'
+          ),
+          _react2.default.createElement(
+            'p',
+            null,
+            'JavaScript'
+          ),
+          _react2.default.createElement(
+            'p',
+            null,
+            'React-Redux'
+          ),
+          _react2.default.createElement(
+            'p',
+            null,
+            'HTML5'
+          ),
+          _react2.default.createElement(
+            'p',
+            null,
+            'SCSS'
+          ),
+          _react2.default.createElement(
+            'p',
+            null,
+            'PostgreSQL'
+          ),
+          _react2.default.createElement(
+            'p',
+            null,
+            'Express'
+          ),
+          _react2.default.createElement(
+            'p',
+            null,
+            'D3.js'
+          )
+        ),
+        _react2.default.createElement('img', {
+          src: _ChatRandomHome2.default,
+          className: 'work-image-one'
+        }),
+        _react2.default.createElement('img', {
+          src: _ChatRandomSignIn2.default,
+          className: 'work-image-two'
+        }),
+        _react2.default.createElement('img', {
+          src: _ChatRandomChatting2.default,
+          className: 'work-image-three'
+        }),
+        _react2.default.createElement(
+          'div',
+          { className: 'work-summary' },
+          "A real-time collaboration tool that simplifies and facilitates brainstorming " + "sessions across team members. Users are able to remotely share, categorize, " + "and vote on their deas through virtual whiteboard sessions."
+        )
       )
-    ),
-    _react2.default.createElement(
-      'h2',
-      { className: 'work-section' },
-      'Open Source Contributions'
-    ),
-    _react2.default.createElement(
-      'h3',
-      { className: 'work-title' },
-      'pantry-for-good'
     )
   );
 };
 
 var mapState = null;
+
 var mapDispatch = null;
 
 exports.default = (0, _reactRouterDom.withRouter)((0, _reactRedux.connect)(mapState, mapDispatch)(Work));
@@ -6893,7 +7143,7 @@ exports = module.exports = __webpack_require__(96)();
 
 
 // module
-exports.push([module.i, "body {\n  font-family: 'PT Sans', sans-serif; }\n  body a {\n    text-decoration: none; }\n  body label {\n    display: block; }\n  body nav {\n    float: left;\n    top: 0;\n    height: 150px;\n    width: 100px;\n    text-align: left;\n    font-family: 'Raleway', sans-serif;\n    margin-right: 0;\n    font-weight: bold;\n    color: black;\n    font-size: 14px;\n    opacity: 0.8;\n    transition: all 500ms ease-in-out;\n    z-index: 2; }\n  body nav a {\n    display: block;\n    margin: 1em;\n    letter-spacing: 3px;\n    padding: 10px; }\n  body nav a:visited {\n    color: black; }\n  body nav a:visited:hover {\n    color: white; }\n  body svg {\n    position: absolute;\n    bottom: 0;\n    width: 100%;\n    height: 10vw;\n    z-index: -1; }\n  body form div {\n    margin: 1em;\n    display: inline-block; }\n  body p {\n    display: block;\n    margin: auto; }\n\n#home-nav-hover:hover {\n  background-color: #C84C85;\n  color: white; }\n\n#about-nav-hover:hover {\n  background-color: #5CAAAC;\n  color: white; }\n\n#work-nav-hover:hover {\n  background-color: #4A5fD3;\n  color: white; }\n\n#home-nav-hover:hover > .slider {\n  display: inline; }\n\n.slider {\n  display: none; }\n\n.introduction-container {\n  display: grid;\n  grid-template-columns: 1fr 0.5fr 1fr 2fr 1fr;\n  grid-template-rows: repeat(12, 1fr);\n  position: relative;\n  height: 600px;\n  padding-top: 100px; }\n\n.introduction {\n  grid-column: 2 /span 2;\n  grid-row: 2 /span 2;\n  font-size: 50px;\n  perspective: 1000px;\n  perspective-origin: 200px 40px;\n  z-index: 2; }\n\n#m-letter {\n  color: #A5288E; }\n\n.intro-letters {\n  transition: transform 300ms ease-in-out;\n  display: inline-block;\n  text-shadow: 2px 2px white; }\n\n.intro-letters:hover {\n  -webkit-transform: scale(1.2, 0.8);\n  transform: scale(1.2, 0.8);\n  color: #FD777F;\n  text-shadow: -2px -2px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; }\n\n.intro-spacing {\n  padding-right: 5px; }\n\n.initials {\n  display: inline-block;\n  grid-column: 3;\n  grid-row: 4 /span 3;\n  padding-left: 100px;\n  font-size: 20em;\n  color: #475CDA;\n  text-shadow: -10px -10px 0 #000;\n  transform: rotate(-20deg);\n  z-index: 1; }\n\n.technology-large-list {\n  grid-column: 3 /span 2;\n  grid-row: 1 /span 2;\n  padding-left: 550px;\n  margin-top: 200px;\n  z-index: -1; }\n\n.technology-names {\n  font-family: monospace;\n  font-size: 16px;\n  transform: rotate(-20deg);\n  z-index: -1;\n  padding: 5px;\n  letter-spacing: 3px;\n  opacity: 0.5; }\n\n.technology-names:hover {\n  color: purple; }\n\n.slider {\n  display: inline;\n  height: 2px;\n  width: 2px;\n  border-top: 1px solid blue;\n  background-color: yellow;\n  transition: all 1s ease-in-out;\n  -webkit-transition: all 1s ease-in-out; }\n\n.slider:hover {\n  right: 0;\n  color: pink; }\n\n.dot {\n  opacity: 0;\n  transition: all 1s ease-in-out; }\n\n.about-container {\n  display: grid;\n  grid-template-columns: repeat(1fr 2fr 2fr 1fr);\n  grid-template-rows: repeat(12, 1fr);\n  position: relative;\n  height: 600px; }\n\n.about-paragraph {\n  grid-column: 2 /span 3;\n  grid-row: 6; }\n\n.portfolio-pic {\n  grid-column: 1;\n  grid-row: 5 /span 3;\n  padding: 20px; }\n\n.work-container {\n  display: grid;\n  grid-template-columns: repeat(1fr 2fr 2fr 1fr);\n  grid-template-rows: repeat(5, 1fr); }\n\n.work-section {\n  text-align: center; }\n\n.work-section .work-title {\n  grid-column: 2; }\n\n.work-title {\n  display: grid;\n  grid-template-columns: 0.5fr 2fr 1fr;\n  grid-template-rows: 0.5fr 2fr 0.3fr 0.1fr; }\n\n.work-summary > h2 {\n  background-color: #592E66;\n  color: black; }\n\n.work-title > a:visited {\n  color: black; }\n\n.chat-random-mockup {\n  grid-column: 2;\n  grid-row: 2; }\n\n.work-title > p {\n  grid-column: 2;\n  grid-row: 3;\n  text-align: center; }\n\n.work-summary {\n  grid-column: 2;\n  grid-row: 1;\n  margin: auto; }\n\n.work-tech-list {\n  grid-column: 2;\n  grid-row: 4;\n  text-align: center; }\n\n.work-technologies {\n  font-size: 12px;\n  display: inline-block;\n  padding: 10px;\n  margin: auto;\n  background-color: #DCDCDC;\n  letter-spacing: 2px; }\n\n#first-dot {\n  grid-column: 4;\n  grid-row: 2; }\n\n#second-dot {\n  grid-column: 4;\n  grid-row: 5; }\n\n#third-dot {\n  grid-column: 3;\n  grid-row: 6; }\n\n#fourth-dot {\n  grid-column: 2;\n  grid-row: 3; }\n\n#fifth-dot {\n  grid-column: 2;\n  grid-row: 11; }\n\n#sixth-dot {\n  grid-column: 4;\n  grid-row: 4; }\n", ""]);
+exports.push([module.i, "body {\n  font-family: 'PT Sans', sans-serif; }\n  body a {\n    text-decoration: none; }\n  body label {\n    display: block; }\n  body nav {\n    float: left;\n    top: 0;\n    height: 170px;\n    width: 120px;\n    text-align: left;\n    font-family: 'Raleway', sans-serif;\n    font-weight: bold;\n    color: black;\n    font-size: 14px;\n    opacity: 0.8;\n    transition: all 500ms ease-in-out;\n    z-index: 2; }\n  body nav a {\n    display: block;\n    margin: 1em;\n    letter-spacing: 3px;\n    padding: 10px; }\n  body nav a:visited {\n    color: black; }\n  body nav a:visited:hover {\n    color: white; }\n  body svg {\n    position: absolute;\n    bottom: 0;\n    width: 100%;\n    height: 10vw;\n    z-index: -1; }\n  body form div {\n    margin: 1em;\n    display: inline-block; }\n  body p {\n    display: block;\n    margin: auto; }\n\n#home-nav-hover:hover {\n  background-color: #C84C85;\n  color: white; }\n\n#about-nav-hover:hover {\n  background-color: #5CAAAC;\n  color: white; }\n\n#work-nav-hover:hover {\n  background-color: #4A5fD3;\n  color: white; }\n\n#home-nav-hover:hover > .slider {\n  display: inline; }\n\n.slider {\n  display: none; }\n\n.introduction-container {\n  display: grid;\n  grid-template-columns: 1fr 0.5fr 1fr 2fr 1fr;\n  grid-template-rows: repeat(12, 1fr);\n  position: relative;\n  height: 600px;\n  padding-top: 100px; }\n\n.introduction {\n  grid-column: 2 /span 2;\n  grid-row: 2 /span 2;\n  font-size: 50px;\n  perspective: 1000px;\n  perspective-origin: 200px 40px;\n  z-index: 2; }\n\n#m-letter {\n  color: #A5288E; }\n\n.intro-letters {\n  transition: transform 300ms ease-in-out;\n  display: inline-block;\n  text-shadow: 2px 2px white; }\n\n.intro-letters:hover {\n  -webkit-transform: scale(1.2, 0.8);\n  transform: scale(1.2, 0.8);\n  color: #FD777F;\n  text-shadow: -2px -2px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; }\n\n.intro-spacing {\n  padding-right: 5px; }\n\n.initials {\n  display: inline-block;\n  grid-column: 3;\n  grid-row: 4 /span 3;\n  padding-left: 100px;\n  font-size: 20em;\n  color: #475CDA;\n  text-shadow: -10px -10px 0 #000;\n  transform: rotate(-20deg);\n  z-index: 1; }\n\n#about-initials, #work-initials {\n  grid-column: 3 /span 3;\n  grid-row: 7 /span 5;\n  color: #592E66;\n  opacity: 0.2;\n  z-index: -1; }\n\n#work-initials {\n  grid-column: 6 /span 3;\n  grid-row: 1 /span 3;\n  color: #FD777F; }\n\n.technology-large-list {\n  grid-column: 3 /span 2;\n  grid-row: 1 /span 2;\n  padding-left: 550px;\n  margin-top: 200px;\n  z-index: -1; }\n\n.technology-names {\n  font-family: monospace;\n  font-size: 16px;\n  transform: rotate(-20deg);\n  z-index: -1;\n  padding: 5px;\n  letter-spacing: 3px;\n  opacity: 0.5; }\n\n.technology-names:hover {\n  color: purple; }\n\n.slider {\n  display: inline;\n  height: 2px;\n  width: 2px;\n  border-top: 1px solid blue;\n  background-color: yellow;\n  transition: all 1s ease-in-out;\n  -webkit-transition: all 1s ease-in-out; }\n\n.slider:hover {\n  right: 0;\n  color: pink; }\n\n.dot {\n  opacity: 0;\n  transition: all 1s ease-in-out; }\n\n.about-container {\n  display: grid;\n  grid-template-columns: repeat(12, 1fr);\n  grid-template-rows: repeat(12, 1fr);\n  position: relative;\n  height: 600px; }\n\n.about-paragraph {\n  grid-column: 3 /span 4;\n  grid-row: 9;\n  font-size: 20px;\n  letter-spacing: 3px;\n  padding-top: 10px; }\n\n.about-paragraph-list {\n  padding: 10px; }\n\n.portfolio-pic {\n  grid-column: 2;\n  grid-row: 5 /span 3;\n  padding: 20px; }\n\n.my-stack-list {\n  grid-row: 10;\n  grid-column: 3 /span 4;\n  padding: 10px; }\n\n.about-links {\n  grid-column: 3 /span 4;\n  grid-row: 10;\n  margin: 10px; }\n\n.about-links > a {\n  display: inline-block;\n  padding: 5px; }\n\n.work-container {\n  grid-row: 4;\n  grid-column: 2 /span 6;\n  display: grid;\n  grid-template-columns: repeat(1fr 2fr 2fr 1fr);\n  grid-template-rows: repeat(1, 1fr); }\n\n.work-section {\n  grid-column: 2; }\n\n.work-section {\n  display: grid;\n  grid-template-columns: repeat(12, 1fr);\n  grid-template-rows: 0.3fr repeat(5, 1fr);\n  font-family: 'Roboto', sans-serif; }\n\n.work-section > a:visited {\n  color: black; }\n\n.work-section > p {\n  grid-column: 2 /span 2;\n  grid-row: 2; }\n\n.work-image-one {\n  grid-column: 1 /span 8;\n  grid-row: 3 /span 8;\n  transition: all 1s ease-in-out;\n  padding: 10px;\n  width: 100%;\n  height: 300px; }\n\n.work-image-one:hover {\n  transform: scale(1.5); }\n\n.work-image-two {\n  grid-column: 9 /span 3;\n  grid-row: 3 /span 3;\n  padding-left: 10px;\n  width: 100%;\n  height: 150px;\n  transition: all 1s ease-in-out; }\n\n.work-image-two:hover {\n  transform: scale(2); }\n\n.work-image-three {\n  grid-column: 9 /span 3;\n  grid-row: 5 /span 3;\n  padding-left: 10px;\n  width: 100%;\n  height: 150px;\n  transition: all 1s ease-in-out; }\n\n.work-image-three:hover {\n  transform: scale(2); }\n\np.work-title {\n  grid-column: 2 /span 10;\n  grid-row: 1;\n  margin: auto;\n  font-size: 30px; }\n\n.work-stack {\n  grid-column: 2 /span 10;\n  grid-row: 2;\n  margin: auto; }\n\n.work-stack > p {\n  font-size: 12px;\n  display: inline-block;\n  padding: 10px;\n  background-color: #2C6590;\n  border: solid 3px white;\n  color: white;\n  border-radius: 50px; }\n\n.work-summary {\n  grid-column: 1 /span 8;\n  grid-row: 6;\n  margin: auto;\n  padding-left: 10px;\n  font-size: 14px;\n  padding-bottom: 20px; }\n\n.work-summary > h2 {\n  background-color: #592E66;\n  color: black; }\n\n#first-dot {\n  grid-column: 4;\n  grid-row: 2; }\n\n#second-dot {\n  grid-column: 4;\n  grid-row: 5; }\n\n#third-dot {\n  grid-column: 3;\n  grid-row: 6; }\n\n#fourth-dot {\n  grid-column: 2;\n  grid-row: 3; }\n\n#fifth-dot {\n  grid-column: 5;\n  grid-row: 11; }\n\n#sixth-dot {\n  grid-column: 6;\n  grid-row: 4; }\n", ""]);
 
 // exports
 
@@ -7603,12 +7853,7 @@ module.exports = isTextNode;
 module.exports = __webpack_require__.p + "./images/d49b3e7a9f94f6e3f40e53b7fd4b9298.jpg";
 
 /***/ }),
-/* 105 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "./images/2cf3460a87e22d4d59e76c4513311113.jpg";
-
-/***/ }),
+/* 105 */,
 /* 106 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -30462,6 +30707,42 @@ module.exports = function(originalModule) {
 	return module;
 };
 
+
+/***/ }),
+/* 161 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "./images/69b3dc06c104e412834fdc668521250c.jpg";
+
+/***/ }),
+/* 162 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "./images/ade0eaa93be317abc4e192b8f41b59f6.jpg";
+
+/***/ }),
+/* 163 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "./images/1c1da22ba9229f49442830ecfae24106.jpg";
+
+/***/ }),
+/* 164 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "./images/9c14abd19acd284ac02364501db69e47.jpg";
+
+/***/ }),
+/* 165 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "./images/7856707a78dd8ecac87dc38730664f61.jpg";
+
+/***/ }),
+/* 166 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "./images/c9a071b93f71d50734a078977e91347a.jpg";
 
 /***/ })
 /******/ ]);

@@ -13,7 +13,53 @@ const About = () => {
   }
   return (
     <div className='about-container' onMouseOver={showDots}>
-      {/*<svg
+      <img
+        src={PortfolioPic}
+        className='portfolio-pic'
+        width='200vw'
+        height='225vh'
+      />
+      <div className='about-links'>
+        <a href='https://github.com/mbetances805'>
+          <img
+            src='https://image.flaticon.com/icons/svg/25/25231.svg'
+            width='25px'
+            height='25px'
+          />
+        </a>
+        <a href='https://www.linkedin.com/in/mariabetances/'>
+          <img
+            src='https://image.flaticon.com/icons/svg/25/25320.svg'
+            width='25px'
+            height='25px'
+          />
+        </a>
+        <a href='https://medium.com/@mbetances1002'>
+          <img
+            src='https://image.flaticon.com/icons/svg/725/725376.svg'
+            width='25px'
+            height='25px'
+          />
+        </a>
+        <a href=''>
+          <img
+            src='https://image.flaticon.com/icons/svg/559/559233.svg'
+            width='25px'
+            height='25px'
+          />
+        </a>
+      </div>
+      <Dot id='fourth-dot' radius={'20'} color='DeepSkyBlue' />
+      <Dot id='fifth-dot' radius={'50'} color='#D2BBEE' />
+      <Dot id='sixth-dot' radius={'40'} color='#4A5fD3' />
+      <div className='about-paragraph'>
+        <p className='about-paragraph-list'>{'Web Developer'}</p>
+        <p className='about-paragraph-list'>{'Analytical'}</p>
+        <p className='about-paragraph-list'>{'Passionate'}</p>
+        <p className='about-paragraph-list'>{'Vegan Foodie'}</p>
+      </div>
+      <p className='initials' id='about-initials'>{'MB'}</p>
+      {/* <svg
         xmlns='http://www.w3.org/2000/svg'
         viewBox='0 0 100 100'
         preserveAspectRatio='none'
@@ -22,26 +68,9 @@ const About = () => {
           fill='white'
           points='0,100 100,0 100,100'
         />
-      </svg>*/}
-      <img
-        src={PortfolioPic}
-        className='portfolio-pic'
-        width='200vw'
-        height='225vh'
-      />
-      <Dot id='fourth-dot' radius={'20'} color='DeepSkyBlue' />
-      <Dot id='fifth-dot' radius={'50'} color='#D2BBEE' />
-      <Dot id='sixth-dot' radius={'40'} color='#4A5fD3' />
-      <p className='about-paragraph'>
-        Of recommend residence education be on difficult repulsive offending.
-        Judge views had mirth table seems great him for her. Alone all happy
-        asked begin fully stand own get. Excuse ye seeing result of we. See
-        scale dried songs old may not. Promotion did disposing you household
-        any instantly. Hills we do under times at first short an. On projection
-        apartments unsatiable so if he entreaties appearance. Rose you wife how
-        set lady half wish. Hard sing an in true felt. Welcomed stronger if steepest
-        ecstatic an suitable finished of oh.
-      </p>
+      </svg> */}
+      {/* <p className='my-stack-list'>{'JavaScript, React-Redux, Node.js, ' +
+        'HTML5, CSS3, SQL, Postgres, Sequelize ORM, Python, D3.js, Jasmine, jQuery'}</p> */}
     </div>
   )
 }

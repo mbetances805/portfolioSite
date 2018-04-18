@@ -1,54 +1,154 @@
 import React from 'react'
-import {withRouter} from 'react-router-dom'
 import {connect} from 'react-redux'
-import chatRandomMockup from '../../public/images/chatRandomMockup.jpg'
-
-let technologies = ['React-Redux', 'Node.js', 'Express', 'SCSS']
-let key = 1
+import {withRouter} from 'react-router-dom'
+import ChatRandomHome from '../../public/images/ChatRandomHome.jpg'
+import ChatRandomSignIn from '../../public/images/ChatRandomSignIn.jpg'
+import ChatRandomChatting from '../../public/images/ChatRandomChatting.jpg'
+import toDoHome from '../../public/images/toDoHome.jpg'
+import toDoList from '../../public/images/toDoList.jpg'
+import toDoDashboard from '../../public/images/toDoDashboard.jpg'
+import {Dot} from './index'
 
 const Work = () => {
+  const showDots = () => {
+    let dots = document.querySelectorAll('.dot')
+    dots.forEach(dot => {
+      dot.style.opacity = 0.2
+    })
+  }
   return (
-    <div>
-      <h2 className='work-section'>{'Personal Projects'}</h2>
+    <div className='about-container' onMouseOver={showDots}>
+      <Dot id='fourth-dot' radius={'20'} color='DeepSkyBlue' />
+      <Dot id='sixth-dot' radius={'40'} color='#4A5fD3' />
+      {/* <p className='initials' id='work-initials'>{'MB'}</p> */}
       <div className='work-container'>
-        <div className='work-title'>
-          <div
-            className='work-summary'>
-            {'Chat with strangers online!'}
-          </div>
-          <a href='https://chatrandom.herokuapp.com/'>
-            <h2>{'Chat Random'}</h2>
-          </a>
-          <img
-            src={chatRandomMockup}
-            className='chat-random-mockup'
-            width='550vw'
-            height='400vh'
-          />
-          <p>
-            {
-              "A messenger that uses the application's state " +
-              'to track sessions, users, and messages.'
-            }
+        {/* Temporary solution. Needs to be dry and retrieve data from back end. */}
+        <div className='work-section'>
+          <p className='work-title'>
+            <a href='https://chatrandom.herokuapp.com/'>
+              <span>{'Chat Random'}</span>
+            </a>
           </p>
-          <div className='work-tech-list'>
+          <div className='work-stack'>
+            <p>{'Node.js'}</p>
+            <p>{'JavaScript'}</p>
+            <p>{'React-Redux'}</p>
+            <p>{'HTML5'}</p>
+            <p>{'SCSS'}</p>
+            <p>{'Socket.io'}</p>
+          </div>
+          <img
+            src={ChatRandomHome}
+            className='work-image-one'
+          />
+          <img
+            src={ChatRandomSignIn}
+            className='work-image-two'
+          />
+          <img
+            src={ChatRandomChatting}
+            className='work-image-three'
+          />
+          <div className='work-summary'>
             {
-                technologies.map(technology => {
-                  return <div className='work-technologies' key={`${technology}-${key}`}>{technology}</div>
-                })
+              "Chat with a stranger online! " +
+              "Chat Random is a messenger that leverages the " +
+              "application's state to manage sessions, users, and messages. " +
+              "Upon entering a username, users are paired " +
+              "with other available users and they are able to " +
+              "chat away!"}
+          </div>
+        </div>
+        <div className='work-section'>
+          <p className='work-title'>
+            <a href='https://daily-to-do-list.herokuapp.com/welcome'>
+              <span>{'toDo'}</span>
+            </a>
+          </p>
+          <div className='work-stack'>
+            <p>{'Node.js'}</p>
+            <p>{'JavaScript'}</p>
+            <p>{'React-Redux'}</p>
+            <p>{'HTML5'}</p>
+            <p>{'SCSS'}</p>
+            <p>{'PostgreSQL'}</p>
+            <p>{'Express'}</p>
+            <p>{'D3.js'}</p>
+          </div>
+          <img
+            src={toDoHome}
+            className='work-image-one'
+          />
+          <img
+            src={toDoList}
+            className='work-image-two'
+          />
+          <img
+            src={toDoDashboard}
+            className='work-image-three'
+          />
+          <div className='work-summary'>
+            {
+              "Track your daily list of to do's with a simple and clean design. " +
+              "Includes descriptive statistics on your productivity."
             }
           </div>
         </div>
-        <h3 className='work-title'>{'toDo'}</h3>
-        <h3 className='work-title'>{'IdeaStorm'}</h3>
+        <div className='work-section'>
+          <p className='work-title'>
+            <a href='https://idea-storm.herokuapp.com/'>
+              <span>{'IdeaStorm'}</span>
+            </a>
+          </p>
+          <div className='work-stack'>
+            <p>{'Node.js'}</p>
+            <p>{'JavaScript'}</p>
+            <p>{'React-Redux'}</p>
+            <p>{'HTML5'}</p>
+            <p>{'SCSS'}</p>
+            <p>{'PostgreSQL'}</p>
+            <p>{'Express'}</p>
+            <p>{'D3.js'}</p>
+          </div>
+          <img
+            src={ChatRandomHome}
+            className='work-image-one'
+          />
+          <img
+            src={ChatRandomSignIn}
+            className='work-image-two'
+          />
+          <img
+            src={ChatRandomChatting}
+            className='work-image-three'
+          />
+          <div className='work-summary'>
+            {
+              "A real-time collaboration tool that simplifies and facilitates brainstorming " +
+              "sessions across team members. Users are able to remotely share, categorize, " +
+              "and vote on their deas through virtual whiteboard sessions."
+            }
+          </div>
+        </div>
       </div>
-      <h2 className='work-section'>{'Open Source Contributions'}</h2>
-      <h3 className='work-title'>{'pantry-for-good'}</h3>
+      {/* <svg
+        xmlns='http://www.w3.org/2000/svg'
+        viewBox='0 0 100 100'
+        preserveAspectRatio='none'
+      >
+        <polygon
+          fill='white'
+          points='0,100 100,0 100,100'
+        />
+      </svg> */}
+      {/* <p className='my-stack-list'>{'JavaScript, React-Redux, Node.js, ' +
+        'HTML5, CSS3, SQL, Postgres, Sequelize ORM, Python, D3.js, Jasmine, jQuery'}</p> */}
     </div>
   )
 }
 
 const mapState = null
+
 const mapDispatch = null
 
 export default withRouter(connect(mapState, mapDispatch)(Work))

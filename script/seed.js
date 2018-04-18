@@ -10,21 +10,36 @@
  * Now that you've got the main idea, check it out in practice below!
  */
 const db = require('../server/db')
-const {User} = require('../server/db/models')
+const {Project} = require('../server/db/models')
 
 async function seed () {
   await db.sync({force: true})
   console.log('db synced!')
   // Whoa! Because we `await` the promise that db.sync returns, the next line will not be
   // executed until that promise resolves!
-
-  const users = await Promise.all([
-    User.create({email: 'cody@email.com', password: '123'}),
-    User.create({email: 'murphy@email.com', password: '123'})
+  let imgPath = '../../public/images/'
+  const projects = await Promise.all([
+    Project.create({title: 'Chat-Random',
+      stack: ['Node.js', 'JavaScript', 'React-Redux', 'HTML5', 'SCSS', 'Socket.io'],
+      images: [`${imgPath}PortfolioSitePic.jpg`, `${imgPath}ChatRandomHome.jpg`, `${imgPath}ChatRandomChatting.jpg`],
+      summary: "Chat with a stranger online! Chat Random is a messenger that leverages " +
+        "the application's state to manage sessions, uses, and messages. Upon entering " +
+        "a username, users are paired with other available users and they are able to chat away"}),
+    Project.create({title: 'toDo',
+      stack: ['Node.js', 'JavaScript', 'React-Redux', 'HTML5', 'SCSS', 'PostgreSQL', 'Express', 'D3.js'],
+      images: [],
+      summary: "Track your daily list of to do's with a simple and clean design. " +
+          "Also, includes descriptive statistics on your productivity."}),
+    Project.create({title: 'IdeaStorm',
+      stack: ['Node.js', 'JavaScript', 'React-Redux', 'HTML5', 'SCSS', 'PostgreSQL, Express, D3.js'],
+      images: [],
+      summary: "A real-time collaboration tool that simplifies and facilitates brainstorming " +
+          "sessions across team members. Users are able to remotely share, categorize, and vote" +
+          "on their deas through virtual whiteboard sessions."})
   ])
   // Wowzers! We can even `await` on the right-hand side of the assignment operator
   // and store the result that the promise resolves to in a variable! This is nice!
-  console.log(`seeded ${users.length} users`)
+  console.log(`seeded ${projects.length} projects`)
   console.log(`seeded successfully`)
 }
 
