@@ -55,6 +55,7 @@ const About = () => {
       <div className='about-paragraph'>
         <p className='about-paragraph-list'>{'Web Developer'}</p>
         <p className='about-paragraph-list'>{'Analytical'}</p>
+        <p className='about-paragraph-list'>{'Team Player'}</p>
         <p className='about-paragraph-list'>{'Passionate'}</p>
         <p className='about-paragraph-list'>{'Vegan Foodie'}</p>
       </div>
