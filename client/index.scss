@@ -406,8 +406,13 @@ p.work-title {
     padding: 5px;
     width: 100%;
   }
+  
+  #app {
+    width: 100%;
+  }
+  
   .introduction {
-    grid-column: 1 /span 4;
+    grid-column: 1 /span 5;
     grid-row: 1 /span 2;
     padding: 10px;
   }
@@ -445,7 +450,7 @@ p.work-title {
   body {
     nav {
       float: none;
-      display: inline-block;
+      display: block;
       width: 100%;
       height: 100%;
       text-align: center;
@@ -455,8 +460,17 @@ p.work-title {
     
     nav a {
       display: inline;
-      padding: 0;
+      padding: 10px;
       margin: 0.5em;
+    }
+  }
+}
+
+@media (max-width: 360px) {
+  body {
+    nav {
+      padding-left: 25px;
+      padding-right: 30px;
     }
   }
 }
