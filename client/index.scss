@@ -85,7 +85,7 @@ body {
   grid-template-rows: repeat(12, 1fr);
   position: relative;
   height: 600px;
-  padding-top: 100px;
+  // padding-top: 100px;
 }
 
 .introduction {
@@ -368,27 +368,95 @@ p.work-title {
   grid-row: 4;
 }
 
+// @media (max-width: 860px) {
+//   .introduction-container {
+//     padding: 10px;
+//     width: 100%;
+//   }
+// 
+//   .initials {
+//     grid-column: 1 / span 2;
+//     grid-row: 3 /span 3;
+//     font-size: 13em;
+//   }
+// 
+//   .technology-large-list {
+//     grid-column: 2 / span 1;
+//     font-size: 8px;
+//     margin-top: 100px;
+//     padding-left: 510px;
+//   }
+// 
+//   #first-dot {
+//     grid-column: 1 /span 2;
+//   }
+// 
+//   #second-dot {
+//     display: none;
+//   }
+// 
+//   #third-dot {
+//     display: none;
+//   }
+// }
+
 @media (max-width: 640px) {
   .introduction-container {
-    padding: 25px;
+    grid-template-columns: 0.5fr 0.5fr 1fr 2fr 1fr;
+    padding: 5px;
+    width: 100%;
   }
-  
   .introduction {
     grid-column: 1 /span 4;
-    grid-row: 1;
+    grid-row: 1 /span 2;
+    padding: 10px;
   }
   
   .initials {
-    grid-row: 2;
     grid-column: 1 /span 3;
-    font-size: 15em;
-    padding-left: 0;
+    grid-row: 2 /span 2;
+    font-size: 13em;
+    padding: 0;
+    display: inline;
+    width: 100%;
+    padding-top: 230px;
   }
   
   .technology-large-list {
-    grid-column: 3;
+    grid-column: 1 /span 3;
     grid-row: 2 /span 2;
-    padding-left: 450px;
+    padding-left: 320px;
     margin-top: 0;
+    padding-top: 200px;
+  }
+  
+  .technology-names {
+    font-size: 8px;
+  }
+  
+  #second-dot {
+    grid-column: 5;
+  }
+  
+  #third-dot {
+    grid-row: 9;
+  }
+  
+  body {
+    nav {
+      float: none;
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+    
+    nav a {
+      display: inline;
+      padding: 0;
+      margin: 0.5em;
+    }
   }
 }
