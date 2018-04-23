@@ -1,12 +1,9 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {withRouter} from 'react-router-dom'
-import ChatRandomHome from '../../public/images/ChatRandomHome.jpg'
-import ChatRandomSignIn from '../../public/images/ChatRandomSignIn.jpg'
-import ChatRandomChatting from '../../public/images/ChatRandomChatting.jpg'
-import toDoHome from '../../public/images/toDoHome.jpg'
-import toDoList from '../../public/images/toDoList.jpg'
-import toDoDashboard from '../../public/images/toDoDashboard.jpg'
+import chatRandomCollage from '../../public/images/chatRandomCollage.jpg'
+import toDoCollage from '../../public/images/toDoCollage.jpg'
+import ideaStormCollage from '../../public/images/ideaStormCollage.jpg'
 import {Dot} from './index'
 
 const Work = () => {
@@ -21,8 +18,10 @@ const Work = () => {
       <Dot id='fourth-dot' radius={'20'} color='DeepSkyBlue' />
       <Dot id='sixth-dot' radius={'40'} color='#4A5fD3' />
       {/* <p className='initials' id='work-initials'>{'MB'}</p> */}
-      <div className='work-container'>
-        {/* Temporary solution. Needs to be dry and retrieve data from back end. */}
+       <div className='work-container'>
+        {/* Temporary solution. Needs to be dry and retrieve data from back end
+          and GitHub API. Images need to be translated to elements in the DOM. 
+          Need to make mobile friendly. */}
         <div className='work-section'>
           <p className='work-title'>
             <a href='https://chatrandom.herokuapp.com/'>
@@ -38,18 +37,10 @@ const Work = () => {
             <p>{'Socket.io'}</p>
           </div>
           <img
-            src={ChatRandomHome}
+            src={chatRandomCollage}
             className='work-image-one'
           />
-          <img
-            src={ChatRandomSignIn}
-            className='work-image-two'
-          />
-          <img
-            src={ChatRandomChatting}
-            className='work-image-three'
-          />
-          <div className='work-summary'>
+          {/* <div className='work-summary'>
             {
               "Chat with a stranger online! " +
               "Chat Random is a messenger that leverages the " +
@@ -57,7 +48,7 @@ const Work = () => {
               "Upon entering a username, users are paired " +
               "with other available users and they are able to " +
               "chat away!"}
-          </div>
+          </div> */}
         </div>
         <div className='work-section'>
           <p className='work-title'>
@@ -76,23 +67,15 @@ const Work = () => {
             <p>{'D3.js'}</p>
           </div>
           <img
-            src={toDoHome}
+            src={toDoCollage}
             className='work-image-one'
           />
-          <img
-            src={toDoList}
-            className='work-image-two'
-          />
-          <img
-            src={toDoDashboard}
-            className='work-image-three'
-          />
-          <div className='work-summary'>
+          {/* }<div className='work-summary'>
             {
               "Track your daily list of to do's with a simple and clean design. " +
-              "Includes descriptive statistics on your productivity."
+              "Includes descriptive statistics on your productivity leveraging D3.js."
             }
-          </div>
+          </div> */}
         </div>
         <div className='work-section'>
           <p className='work-title'>
@@ -111,26 +94,18 @@ const Work = () => {
             <p>{'D3.js'}</p>
           </div>
           <img
-            src={ChatRandomHome}
+            src={ideaStormCollage}
             className='work-image-one'
           />
-          <img
-            src={ChatRandomSignIn}
-            className='work-image-two'
-          />
-          <img
-            src={ChatRandomChatting}
-            className='work-image-three'
-          />
-          <div className='work-summary'>
+          {/* <div className='work-summary'>
             {
               "A real-time collaboration tool that simplifies and facilitates brainstorming " +
               "sessions across team members. Users are able to remotely share, categorize, " +
               "and vote on their deas through virtual whiteboard sessions."
             }
-          </div>
+          </div> */}
         </div>
-      </div>
+      </div> 
       {/* <svg
         xmlns='http://www.w3.org/2000/svg'
         viewBox='0 0 100 100'
