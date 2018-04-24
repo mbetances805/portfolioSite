@@ -102,8 +102,8 @@ const Work = () => {
           <div className='work-summary'>
             {
               "A real-time collaboration tool that simplifies and facilitates brainstorming " +
-              "sessions across team members. Users are able to remotely share, categorize, " +
-              "and vote on their deas through virtual whiteboard sessions."
+              "sessions between team members. Users are able to remotely share, categorize, " +
+              "and vote on their ideas during virtual whiteboard sessions."
             }
           </div>
         </div>
