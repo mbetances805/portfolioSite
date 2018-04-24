@@ -63,7 +63,7 @@ const Work = () => {
             <p>{'JavaScript'}</p>
             <p>{'React-Redux'}</p>
             <p>{'HTML5'}</p>
-            <p>{'SCSS'}</p>
+            <p>{'CSS3'}</p>
             <p>{'PostgreSQL'}</p>
             <p>{'Express'}</p>
             <p>{'D3.js'}</p>
@@ -90,7 +90,7 @@ const Work = () => {
             <p>{'JavaScript'}</p>
             <p>{'React-Redux'}</p>
             <p>{'HTML5'}</p>
-            <p>{'SCSS'}</p>
+            <p>{'CSS3'}</p>
             <p>{'PostgreSQL'}</p>
             <p>{'Express'}</p>
             <p>{'D3.js'}</p>
