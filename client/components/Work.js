@@ -1,9 +1,9 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {withRouter} from 'react-router-dom'
-import chatRandomCollage from '../../public/images/chatRandomCollage.jpg'
-import toDoCollage from '../../public/images/toDoCollage.jpg'
-import ideaStormCollage from '../../public/images/ideaStormCollage.jpg'
+import chatRandomMockup from '../../public/images/chatRandomMockup.jpg'
+import toDoMockup from '../../public/images/toDoMockup.jpg'
+import ideaStormMockup from '../../public/images/ideaStormMockup.jpg'
 import {Dot} from './index'
 
 const Work = () => {
@@ -16,11 +16,13 @@ const Work = () => {
   return (
     <div className='about-container' onMouseOver={showDots}>
       <Dot id='fourth-dot' radius={'20'} color='DeepSkyBlue' />
+      <Dot id='fifth-dot' radius={'50'} color='skyblue' />
       <Dot id='sixth-dot' radius={'40'} color='#4A5fD3' />
+      <Dot id='seventh-dot' radius={'20'} color='thistle' />
       {/* <p className='initials' id='work-initials'>{'MB'}</p> */}
-       <div className='work-container'>
+      <div className='work-container'>
         {/* Temporary solution. Needs to be dry and retrieve data from back end
-          and GitHub API. Images need to be translated to elements in the DOM. 
+          and GitHub API. Images need to be translated to elements in the DOM.
           Need to make mobile friendly. */}
         <div className='work-section'>
           <p className='work-title'>
@@ -37,10 +39,10 @@ const Work = () => {
             <p>{'Socket.io'}</p>
           </div>
           <img
-            src={chatRandomCollage}
+            src={chatRandomMockup}
             className='work-image-one'
           />
-          {/* <div className='work-summary'>
+          <div className='work-summary'>
             {
               "Chat with a stranger online! " +
               "Chat Random is a messenger that leverages the " +
@@ -48,7 +50,7 @@ const Work = () => {
               "Upon entering a username, users are paired " +
               "with other available users and they are able to " +
               "chat away!"}
-          </div> */}
+          </div>
         </div>
         <div className='work-section'>
           <p className='work-title'>
@@ -67,15 +69,15 @@ const Work = () => {
             <p>{'D3.js'}</p>
           </div>
           <img
-            src={toDoCollage}
+            src={toDoMockup}
             className='work-image-one'
           />
-          {/* }<div className='work-summary'>
+          <div className='work-summary'>
             {
               "Track your daily list of to do's with a simple and clean design. " +
               "Includes descriptive statistics on your productivity leveraging D3.js."
             }
-          </div> */}
+          </div>
         </div>
         <div className='work-section'>
           <p className='work-title'>
@@ -94,18 +96,18 @@ const Work = () => {
             <p>{'D3.js'}</p>
           </div>
           <img
-            src={ideaStormCollage}
+            src={ideaStormMockup}
             className='work-image-one'
           />
-          {/* <div className='work-summary'>
+          <div className='work-summary'>
             {
               "A real-time collaboration tool that simplifies and facilitates brainstorming " +
               "sessions across team members. Users are able to remotely share, categorize, " +
               "and vote on their deas through virtual whiteboard sessions."
             }
-          </div> */}
+          </div>
         </div>
-      </div> 
+      </div>
       {/* <svg
         xmlns='http://www.w3.org/2000/svg'
         viewBox='0 0 100 100'
@@ -116,8 +118,6 @@ const Work = () => {
           points='0,100 100,0 100,100'
         />
       </svg> */}
-      {/* <p className='my-stack-list'>{'JavaScript, React-Redux, Node.js, ' +
-        'HTML5, CSS3, SQL, Postgres, Sequelize ORM, Python, D3.js, Jasmine, jQuery'}</p> */}
     </div>
   )
 }

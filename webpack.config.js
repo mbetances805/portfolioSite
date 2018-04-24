@@ -24,7 +24,7 @@ module.exports = {
         ]
       },
       {
-        test: /\.svg$|\.ttf?|\.woff$|\.woff2|\.eof|\.eot/,
+        test: /\.svg$|\.ttf?|\.woff$|\.woff2|\.eof|\.eot|\.pdf/,
         loader: 'file-loader'
       },
       {

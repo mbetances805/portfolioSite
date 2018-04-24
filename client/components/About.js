@@ -2,6 +2,7 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {withRouter} from 'react-router-dom'
 import PortfolioPic from '../../public/images/PortfolioSitePic.jpg'
+import resume from '../../public/Maria_Betances_Resume.pdf'
 import {Dot} from './index'
 
 const About = () => {
@@ -41,7 +42,7 @@ const About = () => {
             height='25px'
           />
         </a>
-        <a href=''>
+        <a href={resume}>
           <img
             src='https://image.flaticon.com/icons/svg/559/559233.svg'
             width='25px'
