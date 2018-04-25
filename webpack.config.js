@@ -24,16 +24,17 @@ module.exports = {
         ]
       },
       {
-        test: /\.svg$|\.ttf?|\.woff$|\.woff2|\.eof|\.eot|\.pdf/,
+        test: /\.svg$|\.ttf?|\.woff$|\.woff2|\.eof|\.eot/,
         loader: 'file-loader'
       },
       {
-        test: /\.(png|jpg)$/,
+        test: /\.(png|jpg|gif|pdf)$/,
         use: [
           {
-            loader: 'file-loader',
+            loader: 'url-loader',
             options: {
-              name: './images/[hash].[ext]'
+              limit: 8192,
+              name: './public/images/[hash].[ext]'
             }
           }
         ]

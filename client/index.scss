@@ -35,6 +35,10 @@ body {
     color: black;
   }
 
+  nav a:link {
+    color: black;
+  }
+
   nav a:visited:hover {
     color: white;
   }
@@ -291,8 +295,8 @@ p.work-title {
   color: black;
 }
 
-.work-title a:unvisited {
-
+.work-title a:link {
+  color: black;
 }
 
 .work-stack {
