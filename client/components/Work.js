@@ -31,6 +31,16 @@ const Work = () => {
             </a>
           </p>
           <div className='work-stack'>
+            <a href='https://github.com/mbetances805/askWonderChatRandom'>
+              <img
+                width='25'
+                height='25'
+                src={'https://image.flaticon.com/icons/svg/25/25231.svg'}
+                className='github-icon'
+                style={{padding: '10px'}}
+                alt='github'
+              />
+            </a>
             <p>{'Node.js'}</p>
             <p>{'JavaScript'}</p>
             <p>{'React-Redux'}</p>
@@ -59,6 +69,16 @@ const Work = () => {
             </a>
           </p>
           <div className='work-stack'>
+            <a href='https://github.com/mbetances805/toDO'>
+              <img
+                width='25'
+                height='25'
+                src={'https://image.flaticon.com/icons/svg/25/25231.svg'}
+                className='github-icon'
+                style={{padding: '10px'}}
+                alt='github'
+              />
+            </a>
             <p>{'Node.js'}</p>
             <p>{'JavaScript'}</p>
             <p>{'React-Redux'}</p>
@@ -86,6 +106,16 @@ const Work = () => {
             </a>
           </p>
           <div className='work-stack'>
+            <span><a href='https://github.com/mbetances805/meeb'>
+              <img
+                width='25'
+                height='25'
+                src={'https://image.flaticon.com/icons/svg/25/25231.svg'}
+                className='github-icon'
+                style={{padding: '10px'}}
+                alt='github'
+              />
+            </a></span>
             <p>{'Node.js'}</p>
             <p>{'JavaScript'}</p>
             <p>{'React-Redux'}</p>
